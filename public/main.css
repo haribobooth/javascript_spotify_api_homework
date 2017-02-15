@@ -19,7 +19,8 @@ main a {
   text-decoration: none;
   color: grey;
   transition-duration: 0.4s;
-  padding: 2px
+  padding: 2px;
+  padding-left: 0px
 }
 
 main a:hover {
@@ -40,7 +41,7 @@ input{
   text-align: center;
   list-style-type: none;
   font-family: sans-serif;
-  max-width: 200px;
+  max-width: 500px;
   padding-left: 0px;
   margin: 0 auto;
 }
@@ -51,7 +52,8 @@ input{
   padding: 10px;
   padding-top: 5px;
   padding-bottom: 15px;
-  border-radius: 2px
+  border-radius: 2px;
+  text-align: left;
 }
 
 #albums li h1 {
