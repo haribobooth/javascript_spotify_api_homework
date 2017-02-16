@@ -62,3 +62,10 @@ input{
 #albums li h2 {
   font-size: 0.8em
 }
+
+#albums li img {
+  margin-right: 15px;
+  margin-top: 15px;
+  vertical-align: center;
+  display: inline-block;
+}

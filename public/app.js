@@ -51,18 +51,26 @@ var populateResultsList = function(items){
 
 var addAlbum = function(list, album){
   var li = document.createElement('li');
+  var detailDiv = document.createElement('div');
   var albumName = document.createElement('h1');
   var artistName = document.createElement('h2');
   var link = document.createElement('a');
+  var image = document.createElement('img');
+  var imageUrl = album.images[1].url;
 
+  image.src = imageUrl;
+  image.style.height = '83px';
+  detailDiv.style.display = "inline-block";
   albumName.innerText = album.name;
   artistName.innerText = album.artists[0].name;
   link.href = "https://play.spotify.com/album/" + album.id;
   link.innerText = "Play album";
 
-  appendElements(albumName, li);
-  appendElements(artistName, li);
-  appendElements(link, li);
+  appendElements(albumName, detailDiv);
+  appendElements(artistName, detailDiv);
+  appendElements(link, detailDiv);
+  appendElements(image, li)
+  appendElements(detailDiv, li);
   appendElements(li, list);
 }
 
