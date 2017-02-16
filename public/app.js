@@ -24,7 +24,7 @@ var updateSearch = function(){
   var searchString = searchField.value.toLowerCase();
 
   for(var album of albumData){
-    if(searchString.length > 0 && album.name.toLowerCase().substring(0, searchString.length) === searchString && !(searchAlbums.includes(album))){
+    if(searchString.length > 0 && (album.name.toLowerCase().substring(0, searchString.length) === searchString || album.artists[0].name.toLowerCase().substring(0, searchString.length) === searchString) && !(searchAlbums.includes(album))){
       searchAlbums.push(album);
     }
   }
