@@ -24,12 +24,12 @@ var updateSearch = function(){
   var searchString = searchField.value.toLowerCase();
 
   for(var album of albumData){
-    if(searchString.length > 0 &&
-      (album.name.toLowerCase().substring(0, searchString.length) === searchString ||
-       album.artists[0].name.toLowerCase().substring(0, searchString.length) === searchString) &&
-       !(searchAlbums.includes(album))){
+    // if(searchString.length > 0 &&
+    //   (album.name.toLowerCase().substring(0, searchString.length) === searchString ||
+    //    album.artists[0].name.toLowerCase().substring(0, searchString.length) === searchString) &&
+    //    !(searchAlbums.includes(album))){
       searchAlbums.push(album);
-    }
+    // }
   }
 
   populateResultsList(searchAlbums);
@@ -67,7 +67,7 @@ var addAlbum = function(list, album){
 }
 
 var updateSearchResults = function(){
-  var url = "https://api.spotify.com/v1/search?q=metal&type=album";
+  var url = "https://api.spotify.com/v1/search?q="+this.value+"&type=album";
   makeRequest(url, updateSearch);
 };
 
